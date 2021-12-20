@@ -4,17 +4,14 @@
 The project is written in Node.js version v14 on the backend. 
 1. cd into server folder
 
-3. ```shell
-npm install```
+3. ```shell npm install```
 
 To instal all dependencies.
 
-3. ```shell 
-npm run seed```
+3. ```shell npm run seed```
 
 to build the databased and seed the sample data into the database.
-4. ```shell
-  npm start```
+4. ```shell npm start```
 
 This will start the backend
   
