@@ -20,13 +20,18 @@ I had issues connecting the backend to the Client and was unable to finish the c
 End points are:
   localhost:30001/customers
     GET
+
   localhost:30001/salespersons
     GET
+
   localhost:30001/salespersons/:id
     GET / PUT
+ 
   localhost:30001/sales
     GET / POST
+ 
   localhost:30001/products
     GET
-  localhost:30001/products
+ 
+  localhost:30001/products/:id
     PUT
