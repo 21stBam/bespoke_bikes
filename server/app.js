@@ -7,6 +7,17 @@ const app = express();
 
 app.use(express.json());
 app.use(express.urlencoded({ extended: true}));
+
+// Add Access Control Allow Origin headers
+app.use((req, res, next) => {
+    res.set("Access-Control-Allow-Origin", "*");
+    res.set(
+        "Access-Control-Allow-Headers",
+        "Origin, X-Requested-With, Content-Type, Accept"
+    );
+    next();
+});
+
 app.use('/api', routes);
 
 app.use((req, res, next) => {

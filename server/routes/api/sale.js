@@ -62,7 +62,7 @@ router.post(
     .isInt(),
   body('salespersonId')
     .isInt(),
-  body('sales_date')
+  body('sale_date')
     .isDate()
     .toDate(),
 
@@ -72,8 +72,10 @@ router.post(
       return res.status(400).json({ errors: errors.array() });
     }
 
+    console.log(req.body);
+
     const new_sale = await Sale.create(req.body);
-    res.json(new_sale);
+    res.json(new_sale.id);
 }));
 
 module.exports = router;

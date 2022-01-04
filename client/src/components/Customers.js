@@ -15,9 +15,9 @@ class Customers extends Component {
 
     performSearch = () => {
         axios.get(`http://localhost:3001/api/customers`)
-            .then(res => {
+            .then(resp => {
                 this.setState({
-                    customers: res.data.data,
+                    customers: resp.data,
                     loading:false
                 });
             })
